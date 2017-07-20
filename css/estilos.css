@@ -1,0 +1,148 @@
+body{
+  background-color: #02010a;
+  margin: 20px;
+  font-family: Dancing Script;
+}
+
+#contenido{
+  text-align: center;
+}
+
+#cabecera{
+  background-color: #5b7989;
+  border-radius: 10px 10px 0px 0px;
+  padding: 1vh 1vw;
+}
+
+#cabecera h1{
+ color: white;
+ text-shadow: 2px 2px #02010a;
+}
+
+#menu-principal a{
+  color: white;
+}
+@media (min-width:900px) {
+  #contenido{
+    max-width: 900px;
+  }
+
+  #cabecera h1{
+   text-align: left;
+   }
+
+  #menu-principal{
+    text-align: right;
+  }
+
+  #imagen-secundaria {
+    display: flex;
+    flex-flow: row wrap;
+    }
+  .c1, .c2{
+    min-width: 50%;
+    }
+
+  .p1, .p2, .p3, .p4, .p5, .p6{
+    max-width: 33.3%
+    }
+  #footer{
+   display: flex;
+   flex-flow: row;
+ }
+ .c3, .c4, .c5, .c6{
+   min-width: 25%;
+ }
+
+  }
+  @media (max-width:900px) {
+    #contenido{
+      width: 100%;
+    }
+    #cabecera{
+      text-align: center;
+    }
+
+  }
+
+#imagen-central{
+    background-color: #82c3a6;
+    text-align: center;
+    padding: 20px;
+}
+#imagen-central img{
+    width: 50%;
+    }
+
+#imagen-secundaria{
+  background-color: #d5c75f;
+  border: 1px;
+  text-align: center;
+  padding: 20px;
+}
+#imagen-secundaria img{
+    width: 50%;
+    text-align: center;
+  }
+.c1 img{
+  transform: rotate(0deg);
+  transition-property: transform;
+  transition-duration: 1s;
+}
+.c1 img:hover{
+  transform: rotate(10deg);
+  box-shadow: 4px 8px #82c3a6;
+  border: 2px solid black;
+}
+
+.c2 img{
+  transform: translate(none);
+  transition-property: transform;
+  transition-duration: 1s;
+}
+
+.c2 img:hover{
+  transform: translate(20px, -5px);
+  box-shadow: 4px 8px #82c3a6;
+  border: 2px solid black;
+}
+
+#footer{
+  background-color: #c6d5c5;
+  border-radius: 0px 0px 8px 8px;
+  padding: 1vh 1vw;
+}
+
+.c5 img{
+  width: 18px;
+}
+
+img{
+  box-shadow: 2px 2px #02010a;
+}
+.p1 img{
+  filter: blur(10px);
+}
+.p2, .p4, .p6 img{
+  filter: grayscale(100%);
+}
+.p3 img{
+  filter: sepia(90%);
+}
+@keyframes cabecera-animacion {
+  0%{
+    margin-top: 150%;
+  }
+  60%{
+    margin-top: -5%;
+  }
+  100%{
+    margin-top: 0%;
+  }
+}
+
+#cabecera{
+  animation-name: cabecera-animacion;
+  animation-duration: 2s;
+  animation-delay: 0s;
+}
